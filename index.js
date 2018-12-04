@@ -26,8 +26,14 @@ fs.readdir("./commands", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setPresence("Gio code", {type: "WATCHING"});
-
+  bot.user.setPresence({
+    game: {
+        name: 'Gio code',
+        type: 3
+    }
+});
+  
+                       
 });
 
 
