@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
   .setTitle("Prefix Set!")
   .setDescription(`Set to ${args[0]}`);
 
-  message.channel.send(sEmbed);
+  message.channel.send({embed});
 
 }
 
