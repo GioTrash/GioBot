@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   let rreason = args.join(" ").slice(22);
   if(!rreason) return errors.noReason(message.channel);
 
-  const reportEmbed = new Discord.RichEmbed()
+  const embed = new Discord.RichEmbed()
   .setDescription("Reports")
   .setColor("#e89209")
   .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
@@ -23,9 +23,8 @@ module.exports.run = async (bot, message, args) => {
 
   let reportschannel = message.guild.channels.find(`name`, "reports");
   if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-
-  message.delete().catch(O_o=>{});
-  reportschannel.send({reportEmbed});
+  
+  message.channel.send({embed});
 
 }
 
