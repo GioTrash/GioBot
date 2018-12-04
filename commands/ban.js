@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   let bReason = args.join(" ").slice(22);
   if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
 
-  let banEmbed = new Discord.RichEmbed()
+  const embed = new Discord.RichEmbed()
   .setDescription("~Ban~")
   .setColor("#bc0000")
   .addField("Banned User", `${bUser} with ID ${bUser.id}`)
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
   if(!incidentchannel) return message.channel.send("Can't find incidents channel.");
 
   message.guild.member(bUser).ban(bReason);
-  incidentchannel.send(banEmbed);
+  message.channel.send({embed});
 }
 
 module.exports.help = {
