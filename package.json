@@ -1,25 +1,28 @@
 {
-
-  "name": "gio",
-
+  "name": "bot",
   "description": "My baby",
-
-  "version": "0.0.0",
-
+  "version": "1.0.0",
   "main": "index.js",
-
   "scripts": {
-
     "start": "node index.js"
-
   },
-
   "dependencies": {
-
     "discord.js": "11.1.0",
-
-    "request": "2.81.0"
-
-  }
-
+    "request": "2.81.0",
+    "file-system": "2.2.2",
+    "ms": "2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GioTrash/GioBot.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Giovanni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GioTrash/GioBot/issues"
+  },
+  "homepage": "https://github.com/GioTrash/GioBot#readme"
 }
