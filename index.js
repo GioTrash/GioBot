@@ -31,9 +31,7 @@ bot.on("ready", async () => {
         name: 'Gio code',
         type: 3
     }
-});
-  
-                       
+  });                     
 });
 
 
