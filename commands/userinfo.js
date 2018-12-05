@@ -17,7 +17,6 @@ module.exports.run = async(bot, message, args) => {
     .setThumbnail(message.author.avatarURL)
     .setTitle(`${user.username}#${user.discriminator}`)
     .addField("Nickname:", `${member.nickname !== null ? `${member.nickname}` : "none"}`, true)
-    .addField("Created at", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true)
     .addField("Bot", `${user.bot}`, true)
     .addField("Status", `${user.presence.status}`, true)
     .addField("Game", `${user.presence.game ? user.presence.game.name : 'None'}`, true)
