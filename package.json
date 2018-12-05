@@ -11,7 +11,7 @@
     "request": "2.81.0",
     "file-system": "2.2.2",
     "ms": "2.1.1",
-    "matter":"2.2.1"
+
   },
   "repository": {
     "type": "git",
