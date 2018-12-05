@@ -1,7 +1,6 @@
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
-const moment = require("moment.js");
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 let coins = require("./coins.json");
