@@ -4,7 +4,7 @@ const botconfig = require("../botconfig.json");
 module.exports.run = async (bot, message, args) => {
   message.delete();
   if(args[0] == "help"){
-    message.reply("Usage: !report <user> <reason>");
+    message.reply("Usage: <prefix> report <user> <reason>");
     return;
   }
   let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
   let reportschannel = message.guild.channels.find(`name`, "reports");
   if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
   
-  message.channel.send({embed});
+  message.channel.reportschannel.send({embed});
 
 }
 
