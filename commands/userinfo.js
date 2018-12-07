@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     const embed = new Discord.RichEmbed()
     .setColor("RANDOM")
     .setThumbnail(message.author.avatarURL)
-    .setTitle(`$user.username # ${user.discriminator}`)
+    .setTitle(`${user.username} # ${user.discriminator}`)
     .addField("Nickname :", `${member.nickname !== null ? `${member.nickname}` : "None"}`, true)
     .addField("Created at :", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss ")}`, true)
     .addField("Bot :", `${user.bot}`, true)
