@@ -25,9 +25,7 @@ module.exports.run = async (bot, message, args) => {
   if (!incidentchannel) return message.channel.send("Can't find incidents channel.");
 
   message.guild.member(bUser).ban(bReason);
-  message.channel.send({
-    embed
-  });
+  message.channel.send({embed});
 }
 
 module.exports.help = {
