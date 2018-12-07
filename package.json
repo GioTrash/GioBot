@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "discord.js": "11.1.0",
-    "request": "2.81.0",
     "file-system": "2.2.2",
-    "ms": "2.1.1"
+    "math.js": "^1.1.43",
+    "moment": "^2.22.2",
+    "ms": "2.1.1",
+    "request": "2.81.0"
   },
   "repository": {
     "type": "git",
