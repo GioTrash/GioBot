@@ -4,7 +4,7 @@ const botconfig = require("../botconfig.json");
 module.exports.run = async (bot, message, args) => {
   message.delete();
   if(args[0] == "help"){
-    message.reply("Usage: <prefix> report <user> <reason>");
+    message.reply("Usage: !report <user> <reason>");
     return;
   }
   let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   let rreason = args.join(" ").slice(22);
   if(!rreason) return errors.noReason(message.channel);
 
-  const embed = new Discord.RichEmbed()
+  const reportEmbed = new Discord.RichEmbed()
   .setDescription("Reports")
   .setColor("#e89209")
   .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
@@ -23,8 +23,9 @@ module.exports.run = async (bot, message, args) => {
 
   let reportschannel = message.guild.channels.find(`name`, "reports");
   if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-  
-  message.channel.send({embed});
+
+  message.delete().catch(O_o=>{});
+  reportschannel.send({reportEmbed});
 
 }
 

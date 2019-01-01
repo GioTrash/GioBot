@@ -16,12 +16,12 @@ module.exports.run = async (bot, message, args) => {
     if (err) console.log(err)
   });
 
-  const embed = new Discord.RichEmbed()
+  let sEmbed = new Discord.RichEmbed()
   .setColor("#FF9900")
   .setTitle("Prefix Set!")
   .setDescription(`Set to ${args[0]}`);
 
-  message.channel.send({embed});
+  message.channel.send(sEmbed);
 
 }
 
