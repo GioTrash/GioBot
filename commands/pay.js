@@ -38,6 +38,7 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = {
-  name: "pay"
+exports.help = {
+  name: "pay",
+  description:"Give your money to another user"
 }

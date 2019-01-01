@@ -29,6 +29,7 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = {
-  name: "report"
+exports.help = {
+  name: "report",
+  description:"Reports a user to the staff, get too many and action will be taken"
 }

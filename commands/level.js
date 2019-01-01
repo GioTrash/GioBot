@@ -27,6 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = {
-  name: "level"
+exports.help = {
+  name: "level",
+  description:"Display your level"
 }

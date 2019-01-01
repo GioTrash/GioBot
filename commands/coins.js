@@ -20,6 +20,7 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = {
-  name: "coins"
+exports.help = {
+  name: "coins",
+  description:"Shows the coins you have available (work in progress)"
 }

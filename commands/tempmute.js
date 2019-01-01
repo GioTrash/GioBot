@@ -73,6 +73,7 @@ module.exports.run = async (bot, message, args) => {
 //end of module
 }
 
-module.exports.help = {
-  name: "tempmute"
+exports.help = {
+  name: "tempmute",
+  description:"Mutes a user for the given time"
 }

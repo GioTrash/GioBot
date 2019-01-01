@@ -25,6 +25,7 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = {
-  name: "prefix"
+exports.help = {
+  name: "prefix",
+  description:"Changes the prefix the bot uses"
 }

@@ -26,6 +26,7 @@ module.exports.run = async (bot, message, args) => {
       
 }
 
-module.exports.help = {
-    name: "userinfo"
+exports.help = {
+    name: "userinfo",
+    description:"Get information about your own or another user's info"
 }

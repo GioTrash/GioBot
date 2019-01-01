@@ -12,6 +12,7 @@ module.exports.run = async (bot, message, args) => {
   message.channel.send(botembed);
 }
 
-module.exports.help = {
-  name:"botinfo"
+exports.help = {
+  name:"botinfo",
+  description:"Displays the bot's info"
 }

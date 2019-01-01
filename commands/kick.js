@@ -28,6 +28,7 @@ module.exports.run = async (bot, message, args) => {
   kickChannel.send({embed});
 }
 
-module.exports.help = {
-  name:"kick"
+exports.help = {
+  name:"kick",
+  description:"kicks the specified user"
 }

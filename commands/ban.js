@@ -28,6 +28,7 @@ module.exports.run = async (bot, message, args) => {
   incidentchannel.send(banEmbed);
 }
 
-module.exports.help = {
-name:"ban"
+exports.help = {
+name:"ban",
+description:"Bans the user"
 }
