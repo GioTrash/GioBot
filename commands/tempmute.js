@@ -50,7 +50,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(`A user has been muted... but their DMs are locked. They will be muted for ${mutetime}`)
   }
 
-  let muteembed = new Discord.RichEmbed()
+  const embed= new Discord.RichEmbed()
   .setDescription(`Mute executed by ${message.author}`)
   .setColor(orange)
   .addField("Muted User", tomute)
@@ -59,9 +59,8 @@ module.exports.run = async (bot, message, args) => {
   .addField("Length", mutetime)
   .addField("Reason", reason);
 
-  let incidentschannel = message.guild.channels.find(`name`, "incidents");
-  if(!incidentschannel) return message.reply("Please create a incidents channel first!");
-  incidentschannel.send(muteembed);
+
+  message.channel.send({embed});
 
   await(tomute.addRole(muterole.id));
 
