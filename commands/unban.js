@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
     .setDescription("Unbanned user")
     .setColor("#15f153")
     .addField("User", `${user.username}`)
-    .addField("Unbanned", `${bUser} With ID ${Buser.id}`)
+    .addField("Unbanned", "unbanned the user")
     
     message.channel.send({embed});
   };
