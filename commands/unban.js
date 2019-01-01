@@ -8,15 +8,9 @@ exports.run = (client, message, args) => {
     if (reason.length < 1) return message.reply('You must supply a reason for the unban.');
     if (!user) return message.reply('You must supply a User Resolvable, such as a user id.').catch(console.error);
     message.guild.unban(user);
-
-
-    const embed= new Discord.RichEmbed()
-    .setDescription("Unbanned user")
-    .setColor("#15f153")
-    .addField("User", `${user.username}`)
-    .addField("Unbanned", "unbanned the user")
     
-    message.channel.send({embed});
+    message.channel.send("User has been unbanned");
+  
   };
   
   exports.conf = {
