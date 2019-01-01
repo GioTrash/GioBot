@@ -1,3 +1,4 @@
+const Discord = require("discord.js);
 exports.run = (client, message, args) => {
     let reason = args.slice(1).join(' ');
     client.unbanReason = reason;
