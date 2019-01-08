@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 exports.run = (message, bot) => {
-    message.channel.send("Restarting...").then(m => {
+    message.channel.sendMessage("Restarting...").then(m => {
         m.delete().then(() => {
             bot.destroy().then(() => {
                 process.exit(1)
