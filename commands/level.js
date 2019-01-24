@@ -11,19 +11,19 @@ module.exports.run = async (bot, message, args) => {
      level: 1
   };
 }
-  let curxp = xp[message.author.id].xp;
-  let curlvl = xp[message.author.id].level;
-  let nxtLvlXp = curlvl * 300;
-  let difference = nxtLvlXp - curxp;
+//   let curxp = xp[message.author.id].xp;
+//   let curlvl = xp[message.author.id].level;
+//   let nxtLvlXp = curlvl * 300;
+//   let difference = nxtLvlXp - curxp;
 
-  const embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor(purple)
-  .addField("Level", curlvl, true)
-  .addField("XP", curxp, true)
-  .setFooter(`${difference} XP til level up`, message.author.displayAvatarURL);
+//   const embed = new Discord.RichEmbed()
+//   .setAuthor(message.author.username)
+//   .setColor(purple)
+//   .addField("Level", curlvl, true)
+//   .addField("XP", curxp, true)
+//   .setFooter(`${difference} XP til level up`, message.author.displayAvatarURL);
 
-  message.channel.send({embed}).then(msg => {msg.delete(5000)});
+//   message.channel.send({embed}).then(msg => {msg.delete(5000)});
 
 }
 
