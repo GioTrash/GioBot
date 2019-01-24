@@ -92,12 +92,12 @@ bot.on("message", async message => {
   xp[message.author.id].xp =  curxp + xpAdd;
   if(nxtLvl <= xp[message.author.id].xp){
     xp[message.author.id].level = curlvl + 1;
-    const embed = new Discord.RichEmbed()
-    .setTitle("Level Up!")
-    .setColor(purple)
-    .addField("New Level", curlvl + 1);
+//     const embed = new Discord.RichEmbed()
+//     .setTitle("Level Up!")
+//     .setColor(purple)
+//     .addField("New Level", curlvl + 1);
 
-    message.channel.send({embed}).then(msg => {msg.delete(5000)});
+//     message.channel.send({embed}).then(msg => {msg.delete(5000)});
   }
   fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
     if(err) console.log(err)
