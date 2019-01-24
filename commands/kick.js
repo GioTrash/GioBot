@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!");
   if(args[0] == "help"){
-    message.reply("Usage: !kick <user> <reason>");
+    message.reply("Usage: .kick <user> <reason>");
     return;
   }
   let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Kicked User", `${kUser} with ID ${kUser.id}`)
   .addField("Kicked By", `<@${message.author.id}> with ID ${message.author.id}`)
   .addField("Kicked In", message.channel)
-  .addField("Tiime", message.createdAt)
+  .addField("Time", message.createdAt)
   .addField("Reason", kReason);
 
   let kickChannel = message.guild.channels.find(`name`, "incidents");
